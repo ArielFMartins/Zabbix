@@ -7,7 +7,7 @@ sudo dpkg -i zabbix-release_5.1-1+ubuntu20.04_all.deb;
 sudo apt install xdotool;
 sudo apt update;
 sudo apt -y install zabbix-server-mysql zabbix-frontend-php zabbix-apache-conf zabbix-agent;
-sudo apt -y install mariadb-common mariadb-server-10.3 mariadb-client-10.3;
+sudo apt -y install mariadb-common mariadb-server mariadb-client;
 
 sudo apt install aptitude;
 
