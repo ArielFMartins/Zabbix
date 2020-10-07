@@ -5,7 +5,7 @@ sudo dpkg -i zabbix-release_5.1-1+ubuntu20.04_all.deb;
 sudo apt -y install xdotool;
 sudo apt -y update;
 sudo apt -y install zabbix-server-mysql zabbix-frontend-php zabbix-apache-conf zabbix-agent;
-sudo apt -y install mariadb-common mariadb-server-10.3 mariadb-client-10.3;
+sudo apt -y install mariadb-common mariadb-server mariadb-client;
 
 sudo apt -y install aptitude;
 
@@ -48,7 +48,7 @@ sudo mysql -uroot -p'rootDBpass' zabbix -e "set global innodb_strict_mode='ON';"
 
 rm /etc/zabbix/zabbix_server.conf
 
-cp /home/zabbix/Área\ de\ Trabalho/zabbix_server.conf /etc/zabbix/
+cp /home/zabbix_server.conf /etc/zabbix/
 
 sudo systemctl restart zabbix-server zabbix-agent;
  
@@ -56,7 +56,7 @@ sudo systemctl enable zabbix-server zabbix-agent;
 
 rm /etc/zabbix/apache.conf
 
-cp /home/zabbix/Área\ de\ Trabalho/apache.conf /etc/zabbix/
+cp /home/apache.conf /etc/zabbix/
 
 sudo systemctl restart apache2;
 sudo systemctl enable apache2;
